@@ -81,6 +81,10 @@ create_env() {
 
 header "Creating runtime environment"
 
+echo "-----> TEST2 $PATH"
+nasm -v
+echo "-----> TEST2 END"
+
 mkdir -p "$BUILD_DIR/.heroku/node/"
 cd $BUILD_DIR
 create_env # can't pipe the whole thing because piping causes subshells, preventing exports
